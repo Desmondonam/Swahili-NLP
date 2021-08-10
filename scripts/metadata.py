@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(filename='..\logs\model.log', filemode='w', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
 
-directory=('../data/train/wav')
+directory=('C:/Users/DESMOND/NLP/ALFFA_PUBLIC/ASR/SWAHILI/data/train/wav')
 files=[]
 target=('../data/alldata')
 
@@ -17,7 +17,7 @@ rootdir = 'path/to/dir'
 def merge_files():
     #this function loops through all the folders and extracts all the wav files into one folder 
     for folders in os.listdir(directory):
-        #try cacth erros
+        #try catch erros
         try:
         
             print("========== Accessing root directory ============== \n ")
@@ -47,9 +47,9 @@ def merge_files():
 
 name_to_text={}
 
-## creating metadatfile 
+## creating metadatafile 
 def meta_data():
-    logging.info("===================== Initializing meat_data function ==================== \n")
+    logging.info("===================== Initializing meta_data function ==================== \n")
     print ("===================== Creating metadata file ================= \n ")
     filename=('../data/train/text')
     with open (filename, encoding="utf-8")as f:
